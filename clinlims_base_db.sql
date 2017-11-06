@@ -15445,7 +15445,6 @@ SELECT pg_catalog.setval('login_user_seq', 149, true);
 --
 
 COPY markers (id, feed_uri_for_last_read_entry, feed_uri, last_read_entry_id) FROM stdin;
-3	http://localhost:8050/openmrs/ws/atomfeed/lab/46	http://localhost:8050/openmrs/ws/atomfeed/lab/recent	tag:atomfeed.ict4h.org:174e4ac4-96be-4185-b1d6-1626e9ffbff5
 \.
 
 
