@@ -1,4 +1,4 @@
-uuid,name,description,class,shortname,datatype,units,High Normal,Low Normal,Allow Decimal,locale,synonym.1,answer.1,Answer.2,Answer.3,Answer.4,Answer.5,Answer.6,Answer.7,Answer.8,Answer.9,,reference-term-source,reference-term-code,reference-term-relationship
+uuid,name,description,class,shortname,datatype,units,High Normal,Low Normal,Allow Decimal,locale,synonym.1,answer.1,answer.2,answer.3,answer.4,answer.5,answer.6,answer.7,answer.8,answer.9,,reference-term-source,reference-term-code,reference-term-relationship
 ,Family History: Hypertension,,Misc,FH: Hypertension,N/A,,,,,,,,,,,,,,,,,SNOMED CT,160357008,SAME-AS
 ,Family History: Stroke,,Misc,FH:Stroke,N/A,,,,,,,,,,,,,,,,,SNOMED CT,275104002,SAME-AS
 ,Family History:Ischemic Heart Disease ,,Misc,FH:IHD,N/A,,,,,,,,,,,,,,,,,SNOMED CT,297242006,SAME-AS
