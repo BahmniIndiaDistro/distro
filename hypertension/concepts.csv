@@ -28,17 +28,13 @@ uuid,name,description,class,shortname,datatype,units,High Normal,Low Normal,Allo
 ,Congestive heart failure ,,Diagnosis,Congestive heart failure ,N/A,,,,,,,,,,,,,,,,,SNOMED CT,42343007,SAME-AS
 ,Myocardial Infarction,,Diagnosis,Myocardial Infarction,N/A,,,,,,,,,,,,,,,,,SNOMED CT,22298006,SAME-AS
 ,Hypertension,,Diagnosis,Hypertension,N/A,,,,,,,,,,,,,,,,,SNOMED CT,38341003,SAME-AS
-,Atherosclerosis,,Diagnosis,Atherosclerosis,N/A,,,,,,,,,,,,,,,,,SNOMED CT,38716007,SAME-AS
 ,Hypertensive renal disease ,,Diagnosis,Hypertensive renal disease ,N/A,,,,,,,,,,,,,,,,,SNOMED CT,38481006,SAME-AS
-,Traumatic amputation of lower extremity,,Diagnosis,Traumatic amputation of lower extremity,N/A,,,,,,,,,,,,,,,,,SNOMED CT,95860004,SAME-AS
-,Overdose of anesthetic agent ,,Diagnosis,Overdose of anesthetic agent ,N/A,,,,,,,,,,,,,,,,,SNOMED CT,295495008,SAME-AS
 ,DM - Diabetes mellitus,,Diagnosis,Diabetes,N/A,,,,,,,,,,,,,,,,,SNOMED CT,73211009,SAME-AS
 ,TIA - Transient ischaemic attack,,Diagnosis,TIA,N/A,,,,,,,,,,,,,,,,,SNOMED CT,266257000,SAME-AS
 ,Stroke,,Diagnosis,Stroke,N/A,,,,,,,,,,,,,,,,,SNOMED CT,230690007,SAME-AS
 ,Ischemic heart disease,,Diagnosis,IHD,N/A,,,,,,,,,,,,,,,,,SNOMED CT,414545008,SAME-AS
 ,COPD - Chronic obstructive pulmonary disease,,Diagnosis,COPD,N/A,,,,,,,,,,,,,,,,,SNOMED CT,13645005,SAME-AS
 ,Asthma,,Diagnosis,Asthma,N/A,,,,,,,,,,,,,,,,,SNOMED CT,195967001,SAME-AS
-,Complication of systemic hypertensive disorder,,Diagnosis,Complication of systemic hypertensive disorder,N/A,,,,,,,,,,,,,,,,,SNOMED CT,449759005,SAME-AS
 ,CKD - chronic kidney disease,,Diagnosis,CKD,N/A,,,,,,,,,,,,,,,,,SNOMED CT,709044004,SAME-AS
 ,Dementia,,Diagnosis,Dementia,N/A,,,,,,,,,,,,,,,,,SNOMED CT,52448006,SAME-AS
 ,Obstructive sleep apnea syndrome ,,Diagnosis,Obstructive sleep apnea syndrome ,N/A,,,,,,,,,,,,,,,,,SNOMED CT,78275009,SAME-AS
