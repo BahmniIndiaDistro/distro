@@ -1,6 +1,5 @@
 #Prerequisite
-	#mkdir /tmp/shiny-setup
-	#prepate /tmp/shiny-setup/app.properties
+	#prepate /tmp/app.properties
 
 if [ $# -eq 0 ]
   then
@@ -15,10 +14,10 @@ yum -y install docker-io
 echo "***********************************"
 echo "Downloading bahmni shiny docker image"
 sudo service docker start
-docker run --name=shiny -itd -v /tmp/shiny-setup/:/tmp/shiny-setup/  mddubey/bahmni-shiny-v1
+docker run --name=shiny -itd -v /tmp/app.properties:/tmp/app.properties  mddubey/bahmni-shiny-v1
 echo "***********************************"
 echo "Copy app properties file"
-docker exec shiny /bin/bash -c "cp /tmp/shiny-setup/app.properties /srv/shiny-server/bahmni-shiny/app.properties"
+docker exec shiny /bin/bash -c "cp /tmp/app.properties /srv/shiny-server/bahmni-shiny/app.properties"
 echo "***********************************"
 echo "Setting up passwordless ssh for database connection"
 docker exec shiny /bin/bash -c "su - shiny -c \"ssh-keyscan $1 >> ~/.ssh/known_hosts\""
@@ -40,4 +39,5 @@ sqlite3 shiny.sqlite "insert into users values('demo','\$2a\$12\$aZyMtR.kaSqrpK2
 echo "***********************************"
 echo "Create container with local image and start shiny server"
 docker run --name shiny-app -itd -v /var/lib/bahmni-shiny/:/bahmni-shiny/ -p 3838:3838 shiny-local
+docker exec shiny-app /bin/bash -c "start-shiny.sh"
 
