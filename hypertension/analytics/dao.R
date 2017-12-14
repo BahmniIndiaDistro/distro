@@ -131,7 +131,7 @@ fetchData <- function(mysqlPool, psqlPool, shouldFetchAll, startDate, endDate) {
     collect(n=Inf)
 
   patients <- patients %>%
-    inner_join(personAddresses, by = c("person_id"="person_id")) %>%
+    left_join(personAddresses, by = c("person_id"="person_id")) %>%
     rename(District = county_district) %>%
     rename(State = state_province) %>%
     inner_join(patientIdentifiers, by = c("person_id"="patient_id")) %>%
