@@ -1,43 +1,35 @@
-#Prerequisite
-	#prepate /tmp/app.properties
+#!/bin/bash
+set -e
 
-if [ $# -eq 0 ]
-  then
-    echo "Usage:- ./setup_analytics.sh <hostname of database>"
+if [ ! -f /tmp/app.properties ]; then
+    echo "Please setup /tmp/app.properties!"
+    echo "More info here https://github.com/BahmniIndiaDistro/distro#install-the-bahmni-analytics-app"
     exit 1
 fi
-echo "***********************************"
-echo "Installing epel-relese and docker"
-rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-yum update -y 
-yum -y install docker-io
-echo "***********************************"
-echo "Downloading bahmni shiny docker image"
-sudo service docker start
-docker run --name=shiny -itd -v /tmp/app.properties:/tmp/app.properties  mddubey/bahmni-shiny-v1
-echo "***********************************"
-echo "Copy app properties file"
-docker exec shiny /bin/bash -c "cp /tmp/app.properties /srv/shiny-server/bahmni-shiny/app.properties"
-echo "***********************************"
-echo "Setting up passwordless ssh for database connection"
-docker exec shiny /bin/bash -c "su - shiny -c \"ssh-keyscan $1 >> ~/.ssh/known_hosts\""
-docker cp shiny:/home/shiny/.ssh/id_rsa.pub /tmp/
-cat /tmp/id_rsa.pub >> /home/bahmni_support/.ssh/authorized_keys
-rm -f /tmp/id_rsa.pub
-echo "***********************************"
-echo "Committing Local image of bahmni shiny and remove the running container"
-docker commit shiny shiny-local
-docker stop shiny
-docker rm shiny
-echo "***********************************"
-echo "Setting up shared folder for preferences, plugins and users database"
+
+rpm -qa | grep -q epel-release || rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum install -y openssh-server openssh-clients tar wget yum-plugin-ovl R libcurl libcurl-devel openssl-devel mysql-devel libjpeg-turbo-devel libpng-devel postgresql-devel ; yum clean all
+wget https://download3.rstudio.org/centos5.9/x86_64/shiny-server-1.5.3.838-rh5-x86_64.rpm
+yum install -y --nogpgcheck shiny-server-1.5.3.838-rh5-x86_64.rpm
+rm -rf /srv/shiny-server/*
+cd /srv/shiny-server/
+wget https://github.com/ICT4H/bahmni-shiny/archive/master.zip
+unzip master.zip
+mv bahmni-shiny-master bahmni-shiny
+mv /tmp/app.properties bahmni-shiny/
+chown shiny:shiny -R bahmni-shiny
+rm master.zip
+cd /srv/shiny-server/bahmni-shiny
+R -f install_packages.R
+mv /etc/shiny-server/shiny-server.conf /etc/shiny-server/shiny-server.conf.bkp
+cd /srv/shiny-server/bahmni-shiny
+mv setup/shiny-server.conf /etc/shiny-server/shiny-server.conf
+mv setup/*-shiny.sh /usr/bin/
+chmod +x /usr/bin/start-shiny.sh
+chmod +x /usr/bin/stop-shiny.sh
+su shiny -c 'ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -N ""'
 cd /var/lib/ && mkdir bahmni-shiny && cd bahmni-shiny
 mkdir preferences && mkdir plugins
 touch shiny.sqlite
 sqlite3 shiny.sqlite 'create table users(username varchar primary key, password varchar);'
 sqlite3 shiny.sqlite "insert into users values('demo','\$2a\$12\$aZyMtR.kaSqrpK2h/ID43utwz8bS6g.aovQW9z0/kvhlcnwYPfsfe');"
-echo "***********************************"
-echo "Create container with local image and start shiny server"
-docker run --name shiny-app -itd -v /var/lib/bahmni-shiny/:/bahmni-shiny/ -p 3838:3838 shiny-local
-docker exec shiny-app /bin/bash -c "start-shiny.sh"
-
