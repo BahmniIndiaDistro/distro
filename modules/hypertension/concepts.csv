@@ -101,3 +101,5 @@ d83d0b95-a804-4823-b3a8-17ccbdb7f55e,Serum potassium level,,LabTest,Serum potass
 e6499f26-1b78-4c20-a79e-a5067ce204d7,VLDL cholesterol measurement,,LabTest,VLDL cholesterol measurement,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,104585005,SAME-AS
 af1303cd-b31e-4a7c-9459-814559ab23d3,Serum LDL/HDL ratio,,LabTest,Serum LDL/HDL ratio,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,314012003,SAME-AS
 8ac91271-c954-4646-b992-2bc2247fa973,Total cholesterol:HDL ratio,,LabTest,Total cholesterol:HDL ratio,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,166842003,SAME-AS
+361283c1-77cc-4750-a1b4-6f231359ce35,Hypertension Screening Done,,Finding,Hypertension Screening Done,Boolean,,,,,,,,,,,,,,,,,,,
+6e16b2a9-8365-4a7f-afaa-265e6830f75d,Hypertension Screening Date,,Finding,Hypertension Screening Date,Date,,,,,,,,,,,,,,,,,,,
