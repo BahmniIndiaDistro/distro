@@ -16,9 +16,9 @@ cd /srv/shiny-server/
 wget https://github.com/ICT4H/bahmni-shiny/archive/master.zip
 unzip master.zip
 mv bahmni-shiny-master bahmni-shiny
-mv /tmp/app.properties bahmni-shiny/
+mv -f /tmp/app.properties bahmni-shiny/
 chown shiny:shiny -R bahmni-shiny
-rm master.zip
+rm -f master.zip
 cd /srv/shiny-server/bahmni-shiny
 R -f install_packages.R
 mv /etc/shiny-server/shiny-server.conf /etc/shiny-server/shiny-server.conf.bkp
