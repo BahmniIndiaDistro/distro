@@ -10,7 +10,7 @@ fi
 rpm -qa | grep -q epel-release || rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install -y openssh-server openssh-clients tar wget yum-plugin-ovl R libcurl libcurl-devel openssl-devel mysql-devel libjpeg-turbo-devel libpng-devel postgresql-devel ; yum clean all
 wget https://download3.rstudio.org/centos5.9/x86_64/shiny-server-1.5.3.838-rh5-x86_64.rpm
-yum install -y --nogpgcheck shiny-server-1.5.3.838-rh5-x86_64.rpm
+rpm -qa | grep -qw shiny-server || yum install -y --nogpgcheck shiny-server-1.5.3.838-rh5-x86_64.rpm
 rm -rf /srv/shiny-server/*
 cd /srv/shiny-server/
 wget https://github.com/ICT4H/bahmni-shiny/archive/master.zip
