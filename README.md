@@ -7,8 +7,10 @@ The base distro comes with the bahmni metadata and few essential findings,tests,
 To setup the base distro you need to follow steps given below:-
 #### Install bahmni with base database
 * Install bahmni with `base_db/openmrs_backup.sql`,`base_db/openelis_backup.sql` and `base_db/openerp_backup.sql` as the base database dump for openmrs, openelis and openerp respectively. See here for [how to provide database dumps while installation](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/35291242/Install+Bahmni+on+CentOS+Advanced+Installation+Options#InstallBahmnionCentOS(AdvancedInstallationOptions)-Step3:Copyappconfigandbasedatabasedump).
-#### Install the bahmni analytics app
-To install the bahmni analytics app you need to do the following as root user:-
+
+#### Install the bahmni analytics app without docker
+To install the bahmni analytics app you need to do the following :-
+
 * Create a properties file `/tmp/app.properties` with below contents. The values in `<>` needs to be changed.
 ```
 host=<the host of bahmni having mysql and psql db>
@@ -23,14 +25,21 @@ psqlDbName=openerp
 psqlUser=<openerp user name>
 psqlPassword=<openerp passowrd>
 localPsqlPort=9002
-pluginsFolder=/bahmni-shiny/plugins/
-sqliteDbFilePath=/bahmni-shiny/shiny.sqlite
-preferencesFolderPath=/bahmni-shiny/preferences/
+pluginsFolder=/var/lib/bahmni-shiny/plugins/
+sqliteDbFilePath=/var/lib/bahmni-shiny/shiny.sqlite
+preferencesFolderPath=/var/lib/bahmni-shiny/preferences/
 ```
+* Download the `setup_analytics.sh`.
+
+```
+sudo su
+wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/setup_analytics.sh
+```
+
 * Run the `setup_analytics.sh` with the host of bahmni having mysql and psql db as argument.
 
 ```
-sh setup_analytics.sh <the host of bahmni having mysql and psql db>
+sh setup_analytics.sh
 ```
 
 The above will setup analytics application with the minimal visualisatons. Visualisations about specific program will come along with the module installation.
