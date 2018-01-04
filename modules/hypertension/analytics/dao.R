@@ -81,8 +81,11 @@ fetchData <- function(mysqlPool, psqlPool, shouldFetchAll, startDate, endDate) {
   saleOrderLines <- psqlPool %>%
     dbGetQuery(query) %>%
     filter(external_id %in% encounterUUIDs) %>%
-    select(order_id, external_id) %>%
     collect(n=Inf)
+
+  if(nrow(saleOrderLines) <= 0){
+    return (data.frame())
+  }
 
   saleOrderIds <- pull(saleOrderLines, order_id)
   saleOrders <- psqlPool %>%
@@ -148,11 +151,11 @@ fetchData <- function(mysqlPool, psqlPool, shouldFetchAll, startDate, endDate) {
     filter(voided == 0, name %in% variablesToFetch,
       concept_name_type=="FULLY_SPECIFIED") %>%
     select(concept_id,name) %>%
-    collect(n=Inf) 
-
-  obsForVariables <- allObsForHypertensionPatients %>%
+    collect(n=Inf)
+  
+  obsForVariables <- patients %>%
+    left_join(allObsForHypertensionPatients, by = c("person_id"="person_id")) %>%
     inner_join(conceptNames, by = c("concept_id"="concept_id")) %>%  
-    inner_join(patients, by = c("person_id"="person_id")) %>%
     group_by(person_id, concept_id) %>%
     filter(obs_datetime == max(obs_datetime)) %>%
     ungroup() %>%
@@ -161,10 +164,6 @@ fetchData <- function(mysqlPool, psqlPool, shouldFetchAll, startDate, endDate) {
      Age, State, District, Gender, `Visit Date`, Amount, `Care Setting`) %>%
     collect(n = Inf)
 
-    #This is to filter out incorrect data entries.
-    #Like Query below should return single row
-    #SELECT concept_id,encounter_id,value_numeric,obs_datetime FROM obs WHERE obs_id IN (7211637,7211653);
-    #This row says in single encounter same concept has been filled twice at same time
   obsForVariables <- obsForVariables %>% distinct(ID,name, .keep_all = TRUE)
   obsForVariables <- obsForVariables %>% 
     gather(Key, Value, starts_with("value_"), na.rm = T) %>%
