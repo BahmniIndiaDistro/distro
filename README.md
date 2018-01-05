@@ -5,8 +5,25 @@ This repository will contain the database dump files, concept CSVs, reports defi
 The base distro comes with the bahmni metadata and few essential findings,tests,drugs,diagnoses,forms,reports etc which can be used for a general purpose hospital. On top of this a specific program module can be installed.
 
 To setup the base distro you need to follow steps given below:-
-#### Install bahmni with base database
-* Install bahmni with `base_db/openmrs_backup.sql`,`base_db/openelis_backup.sql` and `base_db/openerp_backup.sql` as the base database dump for openmrs, openelis and openerp respectively. See here for [how to provide database dumps while installation](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/35291242/Install+Bahmni+on+CentOS+Advanced+Installation+Options#InstallBahmnionCentOS(AdvancedInstallationOptions)-Step3:Copyappconfigandbasedatabasedump).
+#### Install bahmni with distro-base-db and distro-config.
+* Install bahmni-installer.
+* Prepare the setup and inventory files.
+* Use `base_db/india_distro_base_db/openmrs_backup.sql`,`base_db/india_distro_base_db/openelis_backup.sql` and `base_db/india_distro_base_db/openerp_backup.sql` as the base database dump for openmrs, openelis and openerp respectively.
+```
+cd /etc/bahmni-installer/deployment-artifacts/
+wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/base/india_distro_base_db/openmrs_backup.sql
+wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/base/india_distro_base_db/openelis_backup.sql
+wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/base/india_distro_base_db/openerp_backup.sql
+wget https://github.com/BahmniIndiaDistro/distro-config/archive/master.zip
+unzip master.zip
+rm master.zip
+mv distro-config-master distro_config
+Run the bahmni install command.
+```
+* Use [distro-config](https://github.com/BahmniIndiaDistro/distro-config) as the config for this installation.
+* Run the installer
+
+Once the installation is done you should have the bahmni up with the base data.
 
 #### Install the bahmni analytics app without docker
 To install the bahmni analytics app you need to do the following :-
