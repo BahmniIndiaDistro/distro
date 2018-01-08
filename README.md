@@ -14,13 +14,16 @@ cd /etc/bahmni-installer/deployment-artifacts/
 wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/base/india_distro_base_db/openmrs_backup.sql
 wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/base/india_distro_base_db/openelis_backup.sql
 wget https://raw.githubusercontent.com/BahmniIndiaDistro/distro/master/base/india_distro_base_db/openerp_backup.sql
+```
+* Use [distro-config](https://github.com/BahmniIndiaDistro/distro-config) as the config for this installation.
+```
+cd /etc/bahmni-installer/deployment-artifacts/
 wget https://github.com/BahmniIndiaDistro/distro-config/archive/master.zip
 unzip master.zip
 rm master.zip
-mv distro-config-master distro_config
-Run the bahmni install command.
+mv distro-config-master india-distro_config
 ```
-* Use [distro-config](https://github.com/BahmniIndiaDistro/distro-config) as the config for this installation.
+* Change `implementation-name` to `india-distro` in `/etc/bahmni-installer/setup.yml`.
 * Run the installer
 
 Once the installation is done you should have the bahmni up with the base data.
