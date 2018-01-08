@@ -28,7 +28,7 @@ mv distro-config-master india-distro_config
 
 Once the installation is done you should have the bahmni up with the base data.
 
-#### Install the bahmni analytics app without docker
+#### Install the bahmni analytics app
 To install the bahmni analytics app you need to do the following :-
 
 * Create a properties file `/tmp/app.properties` with below contents. The values in `<>` needs to be changed.
