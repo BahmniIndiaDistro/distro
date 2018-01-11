@@ -43,6 +43,8 @@ echo "Configure Shiny Server"
 mv /etc/shiny-server/shiny-server.conf /etc/shiny-server/shiny-server.conf.bkp
 cd /srv/shiny-server/bahmni-shiny
 mv setup/shiny-server.conf /etc/shiny-server/shiny-server.conf
+/sbin/iptables -I INPUT 1 -p tcp --dport  3838 -j ACCEPT -m comment --comment "Analytics App"
+service iptables save
 echo "Done"
 echo "***************"
 echo "Create Necessary Folder Structure, sqlite database and create demo user"

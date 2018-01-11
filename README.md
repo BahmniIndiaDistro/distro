@@ -6,7 +6,7 @@ The base distro comes with the bahmni metadata and essential findings,tests,drug
 
 To setup the base distro you need to follow steps given below:-
 #### Install bahmni with distro-base-db and distro-config.
-* Install bahmni-installer.
+* Install bahmni-installer. Refer [Here](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/33128505/Install+Bahmni+on+CentOS).
 * Prepare the setup and inventory files.
 * Use `base_db/india_distro_base_db/openmrs_backup.sql`,`base_db/india_distro_base_db/openelis_backup.sql` and `base_db/india_distro_base_db/openerp_backup.sql` as the base database dump for openmrs, openelis and openerp respectively.
 ```

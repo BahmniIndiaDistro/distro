@@ -22,5 +22,5 @@ SELECT Identifier, `Given Name`, `Family Name`, Gender, Age, `Contact Number`  F
    WHERE concept_id =
          (SELECT concept_id FROM concept_name WHERE name = "Hypertension Screening Done" AND concept_name_type = "FULLY_SPECIFIED")
          AND value_coded =
-             (SELECT concept_id FROM concept_name WHERE name = "False (qualifier value)" AND concept_name_type = "FULLY_SPECIFIED"))
+             (SELECT concept_id FROM concept_name WHERE name = "TRUE (qualifier value)" AND concept_name_type = "FULLY_SPECIFIED"))
 ) as tbl WHERE Age >= 30;
