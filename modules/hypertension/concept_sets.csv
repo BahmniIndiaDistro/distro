@@ -1,15 +1,15 @@
 uuid,name,description,class,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,child.8,child.9,,,,reference-term-source,reference-term-code,reference-term-relationship
-d908bbdf-2551-4743-9461-0a8b81baeec3,Lipid Panel,,LabSet,Lipid Panel,Total Cholesterol,Triglycerides measurement ,HDL cholesterol measurement,LDL cholesterol measurement,VLDL cholesterol measurement,Serum LDL/HDL ratio,Total cholesterol:HDL ratio,,,,,,SNOMED CT,16254007,SAME-AS
-9857a182-ce3f-4a62-9499-ab5614d4549e,Blood (substance),,Sample,Blood,Lipid Panel,Random blood glucose ,Total Cholesterol,Triglycerides measurement ,HDL cholesterol measurement,LDL cholesterol measurement,VLDL cholesterol measurement,Serum LDL/HDL ratio,Total cholesterol:HDL ratio,,,,SNOMED CT,87612001,SAME-AS
-af63215a-50aa-4302-b136-7b62d6f2b8d4,Urine (substance),,Sample,Urine,Urine pigment analysis,Urine screening for glucose,,,,,,,,,,,SNOMED CT,78014005,SAME-AS
-e50a1fee-c261-462b-a8eb-f9c3ce4db4c1,Serum (substance),,Sample,Serum,Serum creatinine,Serum sodium level,Serum potassium level,Serum LDL/HDL ratio,,,,,,,,,SNOMED CT,67922002,SAME-AS
-ce3806cf-aa34-48a9-ada2-6157bc79fa21,Digestive System,,ConvSet,,Constipation,,,,,,,,,,,,,,
-95987106-8064-4431-be37-92d3b328f046,Heart Diseases,,ConvSet,,Congestive heart failure ,Myocardial Infarction,Ischemic heart disease,,,,,,,,,,,,
-2fcaf70f-cef4-436d-82a1-3863c1ceefc1,Cardiovascular system,,ConvSet,,TIA - Transient ischaemic attack,Stroke,Hypertension,,,,,,,,,,,,
-30324208-4cee-4999-aa19-699f7952fb06,Respiratory System,,ConvSet,,Asthma,COPD - Chronic obstructive pulmonary disease,,,,,,,,,,,,,
-6da6d43e-7f3d-46cc-a114-efb12ea614eb,Mental Disorders,,ConvSet,,Dementia,,,,,,,,,,,,,,
-8bc73acd-1a44-408d-9075-92e2354eee10,Nervous System and Sense Organ Disorders,,ConvSet,,Hearing loss ,Obstructive sleep apnea syndrome ,,,,,,,,,,,,,
-aa92ef4c-f4d1-4ab3-9bd7-2979dbe7acca,Kidney Disease,,ConvSet,,CKD - chronic kidney disease,Hypertensive renal disease ,,,,,,,,,,,,,
-4a21ec35-d52a-4756-916e-07220ea28a3b,"Enocrine, Nutritional and Metabolic Disorders",,ConvSet,,Hyperparathyroidism ,Hypothyroidism,Hyperthyroidism,DM - Diabetes mellitus,,,,,,,,,,,
-3e4c01ef-762c-4754-88cd-da8bd6f2cf07,Unclassified,,ConvSet,,Coarctation of aorta,,,,,,,,,,,,,,
-7054ee2d-7a8a-4f34-a956-3735e25c70b3,Diagnosis Set of Sets,,ConvSet,,Heart Diseases,Cardiovascular system,Digestive System,Respiratory System,Mental Disorders,Nervous System and Sense Organ Disorders,Kidney Disease,"Enocrine, Nutritional and Metabolic Disorders",Unclassified,,,,,,
+,Lipid Panel,,LabSet,Lipid Panel,Total Cholesterol,Triglycerides measurement ,HDL cholesterol measurement,LDL cholesterol measurement,VLDL cholesterol measurement,Serum LDL/HDL ratio,Total cholesterol:HDL ratio,,,,,,SNOMED CT,16254007,SAME-AS
+,Blood (substance),,Sample,Blood,Lipid Panel,Random blood glucose ,Total Cholesterol,Triglycerides measurement ,HDL cholesterol measurement,LDL cholesterol measurement,VLDL cholesterol measurement,Serum LDL/HDL ratio,Total cholesterol:HDL ratio,,,,SNOMED CT,87612001,SAME-AS
+,Urine (substance),,Sample,Urine,Urine pigment analysis,Urine screening for glucose,,,,,,,,,,,SNOMED CT,78014005,SAME-AS
+,Serum (substance),,Sample,Serum,Serum creatinine,Serum sodium level,Serum potassium level,Serum LDL/HDL ratio,,,,,,,,,SNOMED CT,67922002,SAME-AS
+,Digestive System,,ConvSet,,Constipation,,,,,,,,,,,,,,
+,Heart Diseases,,ConvSet,,Congestive heart failure ,Myocardial Infarction,Ischemic heart disease,,,,,,,,,,,,
+,Cardiovascular system,,ConvSet,,TIA - Transient ischaemic attack,Stroke,Hypertension,,,,,,,,,,,,
+,Respiratory System,,ConvSet,,Asthma,COPD - Chronic obstructive pulmonary disease,,,,,,,,,,,,,
+,Mental Disorders,,ConvSet,,Dementia,,,,,,,,,,,,,,
+,Nervous System and Sense Organ Disorders,,ConvSet,,Hearing loss ,Obstructive sleep apnea syndrome ,,,,,,,,,,,,,
+,Kidney Disease,,ConvSet,,CKD - chronic kidney disease,Hypertensive renal disease ,,,,,,,,,,,,,
+,"Enocrine, Nutritional and Metabolic Disorders",,ConvSet,,Hyperparathyroidism ,Hypothyroidism,Hyperthyroidism,DM - Diabetes mellitus,,,,,,,,,,,
+,Unclassified,,ConvSet,,Coarctation of aorta,,,,,,,,,,,,,,
+,Diagnosis Set of Sets,,ConvSet,,Heart Diseases,Cardiovascular system,Digestive System,Respiratory System,Mental Disorders,Nervous System and Sense Organ Disorders,Kidney Disease,"Enocrine, Nutritional and Metabolic Disorders",Unclassified,,,,,,
