@@ -56,3 +56,7 @@ sqlite3 shiny.sqlite "insert into users values('demo','\$2a\$12\$aZyMtR.kaSqrpK2
 restart shiny-server
 echo "Done"
 echo "***************"
+echo "Create General Analytics plugin"
+mv /srv/shiny-server/bahmni-shiny/plugins/1-General/ /var/lib/bahmni-shiny/plugins/
+echo "Done"
+echo "***************"
