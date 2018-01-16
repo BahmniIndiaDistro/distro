@@ -68,3 +68,16 @@ The above will setup analytics application with the minimal visualisatons. Visua
 This is a utility service which helps us to install the different modules for specific purpose. Checkout the [README](https://github.com/BahmniIndiaDistro/distro-module-manager/blob/master/README.md) for how to install and use.
 
 
+
+## Contributing to the distro
+
+#### Changes in base-distro database
+If there are changes needed as base-distro DBs. Follow the below steps:-
+* Make sure you have a fresh installation of distro. Make sure no modules are installed.
+* Make the necessary changes needed in the database. You need to export the DB dumps along with the schema and push it to github.
+```
+mysqldump --routines -uroot -p openmrs > openmrs_backup.sql
+pg_dump -U postgres clinlims > openelis_backup.sql
+pg_dump -U postgres openerp > openerp_backup.sql
+```
+* Overwrite the above files in `distro/master/base/india_distro_base_db` and push to github.
