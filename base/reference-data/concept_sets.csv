@@ -1,0 +1,15 @@
+uuid,name,description,class,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,child.8,child.9,,,,reference-term-source,reference-term-code,reference-term-relationship
+,Lipid Panel,,LabSet,Lipid Panel,Total Cholesterol,Triglycerides measurement ,HDL cholesterol measurement,LDL cholesterol measurement,VLDL cholesterol measurement,Serum LDL/HDL ratio,Total cholesterol:HDL ratio,,,,,,SNOMED CT,16254007,SAME-AS
+,Blood,,Sample,Blood,Lipid Panel,Random blood glucose ,Total Cholesterol,Triglycerides measurement ,HDL cholesterol measurement,LDL cholesterol measurement,VLDL cholesterol measurement,Serum LDL/HDL ratio,Total cholesterol:HDL ratio,,,,SNOMED CT,87612001,SAME-AS
+,Urine,,Sample,Urine,Urine pigment analysis,Urine screening for glucose,,,,,,,,,,,SNOMED CT,78014005,SAME-AS
+,Serum,,Sample,Serum,Serum creatinine,Serum sodium level,Serum potassium level,Serum LDL/HDL ratio,,,,,,,,,SNOMED CT,67922002,SAME-AS
+,Digestive System,,ConvSet,,Constipation,,,,,,,,,,,,,,
+,Heart Diseases,,ConvSet,,Congestive heart failure ,Myocardial Infarction,Ischemic heart disease,,,,,,,,,,,,
+,Cardiovascular system,,ConvSet,,TIA - Transient ischaemic attack,Stroke,Hypertension,,,,,,,,,,,,
+,Respiratory System,,ConvSet,,Asthma,COPD - Chronic obstructive pulmonary disease,,,,,,,,,,,,,
+,Mental Disorders,,ConvSet,,Dementia,,,,,,,,,,,,,,
+,Nervous System and Sense Organ Disorders,,ConvSet,,Hearing loss ,Obstructive sleep apnea syndrome ,,,,,,,,,,,,,
+,Kidney Disease,,ConvSet,,CKD - chronic kidney disease,Hypertensive renal disease ,,,,,,,,,,,,,
+,"Enocrine, Nutritional and Metabolic Disorders",,ConvSet,,Hyperparathyroidism ,Hypothyroidism,Hyperthyroidism,DM - Diabetes mellitus,,,,,,,,,,,
+,Unclassified,,ConvSet,,Coarctation of aorta,,,,,,,,,,,,,,
+,Diagnosis Set of Sets,,ConvSet,,Heart Diseases,Cardiovascular system,Digestive System,Respiratory System,Mental Disorders,Nervous System and Sense Organ Disorders,Kidney Disease,"Enocrine, Nutritional and Metabolic Disorders",Unclassified,,,,,,
