@@ -60,7 +60,6 @@ uuid,name,description,class,shortname,datatype,units,High Normal,Low Normal,Allo
 ,Diastolic Blood Pressure,,Finding,Diastolic BP,Numeric,mmHg,,,YES,,,,,,,,,,,,,SNOMED CT,163031004,SAME-AS
 ,Pre Hypertension,,Finding,Pre Hypertension,Boolean,,,,,,,,,,,,,,,,,SNOMED CT,702817009,SAME-AS
 ,Dietary Sodium intake,,Finding,Sodium intake,Numeric,mg,,,YES,,,,,,,,,,,,,SNOMED CT,267110002,SAME-AS
-,Hypertension Screening Status,,Finding,Hypertension screening status,N/A,,,,,,,,,,,,,,,,,SNOMED CT,308429009,SAME-AS
 ,Family History,,Finding,Family History,Coded,,,,,,,Family History: Stroke,Family History: Hypertension,Family History:Diabetes Mellitus,Family History:Ischemic Heart Disease,,,,,,,SNOMED CT,57177007,SAME-AS
 ,Adverse Drug Reactions,,Finding,ADRs,Coded,,,,,,,Foot Edema,Cramp,Nausea,Vomiting,Itching,General Weekness,Falls,Headache,Tingling,Constipation,SNOMED CT,62014003,SAME-AS
 ,Co-morbidities,,Finding,Co-morbidities,Coded,,,,,,,DM - Diabetes mellitus,TIA - Transient ischaemic attack,Stroke,Ischemic heart disease,COPD - Chronic obstructive pulmonary disease,Asthma,CKD - chronic kidney disease,Dementia,Hearing loss ,,SNOMED CT,398192003,SAME-AS
