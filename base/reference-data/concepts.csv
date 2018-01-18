@@ -43,23 +43,23 @@ uuid,name,description,class,shortname,datatype,units,High Normal,Low Normal,Allo
 ,Hypothyroidism,,Diagnosis,Hypothyroidism,N/A,,,,,,,,,,,,,,,,,SNOMED CT,40930008,SAME-AS
 ,Coarctation of aorta,,Diagnosis,Coarctation of aorta,N/A,,,,,,,,,,,,,,,,,SNOMED CT,7305005,SAME-AS
 ,Hearing loss ,,Diagnosis,Hearing loss ,N/A,,,,,,,,,,,,,,,,,SNOMED CT,15188001,SAME-AS
-,Body Weight,,Finding,Body Weight,Numeric,Kg,,,YES,,,,,,,,,,,,,SNOMED CT,27113001,SAME-AS
-,Body Height,,Finding,Body Height,Numeric,Cm,,,YES,,,,,,,,,,,,,SNOMED CT,50373000,SAME-AS
-,Body Mass Index,,Finding,BMI,Numeric,,,,YES,,Weight: body mass,,,,,,,,,,,SNOMED CT,60621009,SAME-AS
+,Body Weight,,Finding,Body Weight,Numeric,Kg,,,TRUE,,,,,,,,,,,,,SNOMED CT,27113001,SAME-AS
+,Body Height,,Finding,Body Height,Numeric,Cm,,,TRUE,,,,,,,,,,,,,SNOMED CT,50373000,SAME-AS
+,Body Mass Index,,Finding,BMI,Numeric,,,,TRUE,,Weight: body mass,,,,,,,,,,,SNOMED CT,60621009,SAME-AS
 ,Substance of Abuse,,Finding,Substance of Abuse,Coded,,,,,,,Snuff Tobacco,Cigarette Smoking Tobacco,Chewing Tobacco,,,,,,,,SNOMED CT,312417001,SAME-AS
 ,Alcohol Intake,,Finding,Alcohol Intake,Boolean,,,,,,,,,,,,,,,,,SNOMED CT,365967005,SAME-AS
 ,Date of Diagnosis,,Finding,Date of Diagnosis,Date,,,,,,,,,,,,,,,,,SNOMED CT,432213005,SAME-AS
 ,Cataract of Left Eye,,Finding,Cataract of Left Eye,Boolean,,,,,,,,,,,,,,,,,SNOMED CT,418319009,SAME-AS
 ,Cataract of Right Eye,,Finding,Cataract of Right Eye,Boolean,,,,,,,,,,,,,,,,,SNOMED CT,418567000,SAME-AS
-,Waist/Hip Ratio,,Finding,W/H Ratio,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,248367009,SAME-AS
-,Waist Circumference ,,Finding,Waist circumference ,Numeric,Cm,,,YES,,,,,,,,,,,,,SNOMED CT,276361009,SAME-AS
-,Hip Circumference,,Finding,Hip Circumference,Numeric,Cm,,,YES,,,,,,,,,,,,,SNOMED CT,284472007,SAME-AS
-,Pulse,,Finding,Pulse,Numeric,beats/min,,,,,,,,,,,,,,,,SNOMED CT,8499008,SAME-AS
-,Body Temperature,,Finding,Temperature,Numeric,F,,,YES,,,,,,,,,,,,,SNOMED CT,309646008,SAME-AS
-,Systolic Blood Pressure,,Finding,Systolic BP,Numeric,mmHg,,,YES,,,,,,,,,,,,,SNOMED CT,163030003,SAME-AS
-,Diastolic Blood Pressure,,Finding,Diastolic BP,Numeric,mmHg,,,YES,,,,,,,,,,,,,SNOMED CT,163031004,SAME-AS
+,Waist/Hip Ratio,,Finding,W/H Ratio,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,248367009,SAME-AS
+,Waist Circumference ,,Finding,Waist circumference ,Numeric,Cm,,,TRUE,,,,,,,,,,,,,SNOMED CT,276361009,SAME-AS
+,Hip Circumference,,Finding,Hip Circumference,Numeric,Cm,,,TRUE,,,,,,,,,,,,,SNOMED CT,284472007,SAME-AS
+,Pulse,,Finding,Pulse,Numeric,beats/min,,,FALSE,,,,,,,,,,,,,SNOMED CT,8499008,SAME-AS
+,Body Temperature,,Finding,Temperature,Numeric,F,,,TRUE,,,,,,,,,,,,,SNOMED CT,309646008,SAME-AS
+,Systolic Blood Pressure,,Finding,Systolic BP,Numeric,mmHg,,,FALSE,,,,,,,,,,,,,SNOMED CT,163030003,SAME-AS
+,Diastolic Blood Pressure,,Finding,Diastolic BP,Numeric,mmHg,,,FALSE,,,,,,,,,,,,,SNOMED CT,163031004,SAME-AS
 ,Pre Hypertension,,Finding,Pre Hypertension,Boolean,,,,,,,,,,,,,,,,,SNOMED CT,702817009,SAME-AS
-,Dietary Sodium intake,,Finding,Sodium intake,Numeric,mg,,,YES,,,,,,,,,,,,,SNOMED CT,267110002,SAME-AS
+,Dietary Sodium intake,,Finding,Sodium intake,Numeric,mg,,,TRUE,,,,,,,,,,,,,SNOMED CT,267110002,SAME-AS
 ,Family History,,Finding,Family History,Coded,,,,,,,Family History: Stroke,Family History: Hypertension,Family History:Diabetes Mellitus,Family History:Ischemic Heart Disease,,,,,,,SNOMED CT,57177007,SAME-AS
 ,Adverse Drug Reactions,,Finding,ADRs,Coded,,,,,,,Foot Edema,Cramp,Nausea,Vomiting,Itching,General Weekness,Falls,Headache,Tingling,Constipation,SNOMED CT,62014003,SAME-AS
 ,Co-morbidities,,Finding,Co-morbidities,Coded,,,,,,,DM - Diabetes mellitus,TIA - Transient ischaemic attack,Stroke,Ischemic heart disease,COPD - Chronic obstructive pulmonary disease,Asthma,CKD - chronic kidney disease,Dementia,Hearing loss ,,SNOMED CT,398192003,SAME-AS
@@ -73,16 +73,16 @@ uuid,name,description,class,shortname,datatype,units,High Normal,Low Normal,Allo
 ,Electrocardiographic ,,Procedure,EKG,N/A,,,,,,,,,,,,,,,,,SNOMED CT,29303009,SAME-AS
 ,Chest X-ray,,Procedure,Chest X-ray,N/A,,,,,,,,,,,,,,,,,SNOMED CT,399208008,SAME-AS
 ,Echocardiography,,Procedure,Echocardiography,N/A,,,,,,,,,,,,,,,,,SNOMED CT,40701008,SAME-AS
-,Random blood glucose ,,LabTest,Random blood glucose ,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,271061004,SAME-AS
-,Urine pigment analysis,,LabTest,Urine pigment analysis,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,413024003,SAME-AS
-,Serum creatinine,,LabTest,Serum creatinine,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,113075003,SAME-AS
-,Serum sodium level,,LabTest,Serum sodium level,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,104934005,SAME-AS
-,Serum potassium level,,LabTest,Serum potassium level,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,271236005,SAME-AS
-,Urine screening for glucose,,LabTest,Urine screening for glucose,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,268556000,SAME-AS
-,Total Cholesterol,,LabTest,Total Cholesterol,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,121868005,SAME-AS
-,Triglycerides measurement ,,LabTest,Triglycerides measurement ,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,14740000,SAME-AS
-,HDL cholesterol measurement,,LabTest,HDL cholesterol measurement,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,28036006,SAME-AS
-,LDL cholesterol measurement,,LabTest,LDL cholesterol measurement,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,113079009,SAME-AS
-,VLDL cholesterol measurement,,LabTest,VLDL cholesterol measurement,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,104585005,SAME-AS
-,Serum LDL/HDL ratio,,LabTest,Serum LDL/HDL ratio,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,314012003,SAME-AS
-,Total cholesterol:HDL ratio,,LabTest,Total cholesterol:HDL ratio,Numeric,,,,YES,,,,,,,,,,,,,SNOMED CT,166842003,SAME-AS
+,Random blood glucose ,,LabTest,Random blood glucose ,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,271061004,SAME-AS
+,Urine pigment analysis,,LabTest,Urine pigment analysis,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,413024003,SAME-AS
+,Serum creatinine,,LabTest,Serum creatinine,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,113075003,SAME-AS
+,Serum sodium level,,LabTest,Serum sodium level,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,104934005,SAME-AS
+,Serum potassium level,,LabTest,Serum potassium level,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,271236005,SAME-AS
+,Urine screening for glucose,,LabTest,Urine screening for glucose,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,268556000,SAME-AS
+,Total Cholesterol,,LabTest,Total Cholesterol,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,121868005,SAME-AS
+,Triglycerides measurement ,,LabTest,Triglycerides measurement ,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,14740000,SAME-AS
+,HDL cholesterol measurement,,LabTest,HDL cholesterol measurement,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,28036006,SAME-AS
+,LDL cholesterol measurement,,LabTest,LDL cholesterol measurement,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,113079009,SAME-AS
+,VLDL cholesterol measurement,,LabTest,VLDL cholesterol measurement,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,104585005,SAME-AS
+,Serum LDL/HDL ratio,,LabTest,Serum LDL/HDL ratio,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,314012003,SAME-AS
+,Total cholesterol:HDL ratio,,LabTest,Total cholesterol:HDL ratio,Numeric,,,,TRUE,,,,,,,,,,,,,SNOMED CT,166842003,SAME-AS
