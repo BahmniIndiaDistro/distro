@@ -26,7 +26,11 @@ mv distro-config-master india-distro_config
 * Change `implementation-name` to `india-distro` in `/etc/bahmni-installer/setup.yml`.
 * Run the installer
 
-Once the installation is done you should have the bahmni up with the base data.
+Once the installation is done you should have the bahmni will be up with the metadata.
+
+#### Adding the Common Hospital Data
+The idea is at the end the base-distro will have common clinical data which can be used in a common hospital. As of now it is not included with the base database. As of now the data is present in form of CSV files in `distro/base/reference-data` folder, which needs to be manually uploaded in the admin module.
+* Upload concepts `ref_term.csv`, `concepts.csv`, `concept_sets.csv` and `drugs.csv` in given order using bahmni csv upload feature.
 
 #### Install the bahmni analytics app
 To install the bahmni analytics app you need to do the following :-
